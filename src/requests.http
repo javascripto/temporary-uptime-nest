@@ -13,7 +13,7 @@ GET {{healers}}
 
 ###
 
-@nickname = "nickname"
+@nickname = CUR_7e0c2851-c97c-4030-8b13-4f3422ca482f
 
 GET {{healers}}/{{nickname}}/availability
   ?date=2023-02-25
@@ -50,8 +50,8 @@ Content-Type: application/json
 
 {
   "end": { "hour": 0, "minute": 0 },
-  "start": { "hour": 0, "minute": 0 },
+  "start": { "hour": 17, "minute": 0 },
   "date": "2023-03-25",
-  "healerNickname": "healerNickname",
-  "warriorNickname": "warriorNickname"
+  "healerNickname": "CUR_7e0c2851-c97c-4030-8b13-4f3422ca482f",
+  "warriorNickname": "GUR_021bfa94-a1ce-4c6b-b35b-2f18b522299e"
 }
