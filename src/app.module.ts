@@ -8,7 +8,10 @@ import { Appointment } from './entities/appointment.entity';
 import { HoursService } from './services/hours.service';
 import { HealersService } from './services/healers.service';
 import { WarriorsService } from './services/warriors.service';
+import { HealersController } from './controllers/healers.controller';
+import { WarriorsController } from './controllers/warriors.controller';
 import { AppointmentsService } from './services/appointments.service';
+import { AppointmentsController } from './controllers/appointments.controller';
 
 
 @Module({
@@ -30,7 +33,11 @@ import { AppointmentsService } from './services/appointments.service';
       Appointment,
     ]),
   ],
-  controllers: [],
+  controllers: [
+    HealersController,
+    WarriorsController,
+    AppointmentsController,
+  ],
   providers: [
     HoursService,
     HealersService,
