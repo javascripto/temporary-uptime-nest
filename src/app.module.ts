@@ -5,6 +5,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Healer } from './entities/healer.entity';
 import { Warrior } from './entities/warrior.entity';
 import { Appointment } from './entities/appointment.entity';
+import { HoursService } from './services/hours.service';
+import { HealersService } from './services/healers.service';
+import { WarriorsService } from './services/warriors.service';
+import { AppointmentsService } from './services/appointments.service';
 
 
 @Module({
@@ -27,6 +31,11 @@ import { Appointment } from './entities/appointment.entity';
     ]),
   ],
   controllers: [],
-  providers: [],
+  providers: [
+    HoursService,
+    HealersService,
+    WarriorsService,
+    AppointmentsService,
+  ],
 })
 export class AppModule {}
