@@ -1,0 +1,57 @@
+@baseURL = http://localhost:3000
+@warriors = {{baseURL}}/warriors
+@appointments = {{baseURL}}/appointments
+@healers = {{baseURL}}/healers
+
+###
+
+GET {{warriors}}
+
+###
+
+GET {{healers}}
+
+###
+
+@nickname = "nickname"
+
+GET {{healers}}/{{nickname}}/availability
+  ?date=2023-02-25
+
+###
+
+POST {{warriors}}
+Content-Type: application/json
+
+{
+  "name": "name",
+  "surname": "surname"
+}
+
+###
+
+
+POST {{healers}}
+Content-Type: application/json
+
+{
+  "name": "name",
+  "surname": "surname",
+  "onlineBetween": [
+    { "hour": 6, "minute": 0 },
+    { "hour": 18, "minute": 0 }
+  ]
+}
+
+###
+
+POST {{appointments}}
+Content-Type: application/json
+
+{
+  "end": { "hour": 0, "minute": 0 },
+  "start": { "hour": 0, "minute": 0 },
+  "date": "2023-03-25",
+  "healerNickname": "healerNickname",
+  "warriorNickname": "warriorNickname"
+}
